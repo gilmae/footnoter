@@ -1,0 +1,14 @@
+{
+  "name": "footnoter",
+  "main": "./lib/footnoter",
+  "version": "1.0.0",
+  "description": "Adds footnotes",
+  "activationEvents": ["footnoter:toggle"],
+  "repository": "https://github.com/atom/footnoter",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}

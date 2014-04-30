@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable footnoter': 'footnoter:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'footnoter'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'footnoter:toggle' }
+      ]
+    ]
+  }
+]
