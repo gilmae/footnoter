@@ -1,7 +1,7 @@
 {
   "name": "footnoter",
   "main": "./lib/footnoter",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Adds footnotes",
   "activationEvents": [
     "footnoter:toggle"
