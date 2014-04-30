@@ -1,14 +1,15 @@
 {
   "name": "footnoter",
   "main": "./lib/footnoter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Adds footnotes",
-  "activationEvents": ["footnoter:toggle"],
+  "activationEvents": [
+    "footnoter:toggle"
+  ],
   "repository": "https://github.com/gilmae/footnoter",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
