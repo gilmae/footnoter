@@ -33,8 +33,8 @@ module.exports =
     num = String(matches.length + 1)
 
     index = "".concat('<sup><a name="fni', num, '" href="#fn', num, '">', num, '</a></sup>')
-    footnote_start = "".concat('<a name="fn', num, '">', num, '. ')
-    footnote_end = "".concat('</a> <a href="#fni', num, '">&#8617;</a>')
+    footnote_start = "".concat(num, '.<a name="fn', num, '">&nbsp;</a>')
+    footnote_end = "".concat('<a href="#fni', num, '">&#8617;</a>')
     editor.insertText(index)
     editor.moveCursorToBottom()
     editor.insertNewline()
