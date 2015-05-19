@@ -7,9 +7,9 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.workspace':
+'atom-workspace':
   'ctrl-alt-f': 'footnoter:toggle'
 
-'.editor':
+'atom-text-editor':
   'ctrl-alt-f h': 'footnoter:html'
   'ctrl-alt-f m': 'footnoter:multi-markdown'

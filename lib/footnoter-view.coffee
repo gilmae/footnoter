@@ -1,9 +1,9 @@
-{View} = require 'atom'
+{View} = require 'atom-space-pen-views'
 
 module.exports =
 class FootnoterView extends View
   @content: ->
-    
+
   initialize: (serializeState) ->
     atom.workspaceView.command "footnoter:toggle", => @toggle()
 
