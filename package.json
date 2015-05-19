@@ -1,11 +1,16 @@
 {
   "name": "footnoter",
   "main": "./lib/footnoter",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Adds footnotes, using either MultiMarkdown or (@gruber) HTML formats",
   "activationCommands": {
-    "atom-workspace": ["footnoter:toggle"],
-    "atom-text-editor": ["footnoter:html", "footnoter:multi-markdown"]
+    "atom-workspace": [
+      "footnoter:toggle"
+    ],
+    "atom-text-editor": [
+      "footnoter:html",
+      "footnoter:multi-markdown"
+    ]
   },
   "repository": "https://github.com/gilmae/footnoter",
   "license": "MIT",
