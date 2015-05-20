@@ -1,10 +1,16 @@
 FootnoterView = require './footnoter-view'
+{CompositeDisposable} = require 'atom'
 
 module.exports =
 
   activate: (state) ->
-    atom.commands.add "footnoter:multi-markdown", => @insert_multimarkdown()
-    atom.commands.add "footnoter:html", => @insert_raw_html()
+    @subscriptions = new CompositeDisposable
+
+    @subscriptions.add atom.commands.add 'atom-workspace',
+      "footnoter:multi-markdown", => @insert_multimarkdown()
+
+    @subscriptions.add atom.commands.add 'atom-workspace',
+        "footnoter:html", => @insert_raw_html()
 
   insert_multimarkdown: ->
     # This assumes the active pane item is an editor
@@ -17,10 +23,10 @@ module.exports =
     index = "".concat('[^', num, ']')
     footnote = index.concat(': ')
     editor.insertText(index)
-    editor.moveToBottom()()
+    editor.moveToBottom()
     editor.insertNewline()
     editor.insertNewline()
-    editor.moveToBottom()()
+    editor.moveToBottom()
 
     editor.insertText(footnote)
 
@@ -36,10 +42,10 @@ module.exports =
     footnote_start = "".concat(num, '.<a name="fn', num, '">&nbsp;</a>')
     footnote_end = "".concat('<a href="#fni', num, '">&#8617;</a>')
     editor.insertText(index)
-    editor.moveToBottom()()
+    editor.moveToBottom()
     editor.insertNewline()
     editor.insertNewline()
-    editor.moveToBottom()()
+    editor.moveToBottom()
 
     editor.insertText(footnote_end)
     editor.moveToBeginningOfLine()

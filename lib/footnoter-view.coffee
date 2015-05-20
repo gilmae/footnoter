@@ -5,7 +5,6 @@ class FootnoterView extends View
   @content: ->
 
   initialize: (serializeState) ->
-    atom.workspaceView.command "footnoter:toggle", => @toggle()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
