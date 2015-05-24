@@ -1,7 +1,7 @@
 {
   "name": "footnoter",
   "main": "./lib/footnoter",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Adds footnotes, using either MultiMarkdown or (@gruber) HTML formats",
   "activationCommands": {
     "atom-workspace": [
