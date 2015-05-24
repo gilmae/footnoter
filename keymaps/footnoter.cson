@@ -4,3 +4,4 @@
 'atom-text-editor':
   'ctrl-alt-f h': 'footnoter:html'
   'ctrl-alt-f m': 'footnoter:multi-markdown'
+  'ctrl-alt-f s': 'footnoter:sparse'

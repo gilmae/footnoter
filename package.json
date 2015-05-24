@@ -9,7 +9,8 @@
     ],
     "atom-text-editor": [
       "footnoter:html",
-      "footnoter:multi-markdown"
+      "footnoter:multi-markdown",
+      "footnoter:sparse"
     ]
   },
   "repository": "https://github.com/gilmae/footnoter",

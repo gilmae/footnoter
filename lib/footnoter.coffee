@@ -12,6 +12,9 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-workspace',
         "footnoter:html", => @insert_raw_html()
 
+    @subscriptions.add atom.commands.add 'atom-workspace',
+        "footnoter:sparse", => @insert_sparse()
+
   insert_multimarkdown: ->
     # This assumes the active pane item is an editor
     editor = atom.workspace.getActivePaneItem()
@@ -22,6 +25,24 @@ module.exports =
 
     index = "".concat('[^', num, ']')
     footnote = index.concat(': ')
+    editor.insertText(index)
+    editor.moveToBottom()
+    editor.insertNewline()
+    editor.insertNewline()
+    editor.moveToBottom()
+
+    editor.insertText(footnote)
+
+  insert_sparse: ->
+    # This assumes the active pane item is an editor
+    editor = atom.workspace.getActivePaneItem()
+    text_body = editor.getText()
+
+    matches = text_body.match(/\[\^\d+\]/g) || []
+    num = String(matches.length/2+1)
+
+    index = "".concat('[', num, ']')
+    footnote = "".concat(num, '. ')
     editor.insertText(index)
     editor.moveToBottom()
     editor.insertNewline()

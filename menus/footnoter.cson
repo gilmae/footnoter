@@ -19,6 +19,7 @@
         },
         {label: 'HTML', command:'footnoter:html'}
         {label: 'MultiMarkdown', command:'footnoter:multi-markdown'}
+        {label: 'Sparse', command:'footnoter:sparse'}
       ]
     ]
   }
