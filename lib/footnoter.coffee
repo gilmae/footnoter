@@ -38,11 +38,11 @@ module.exports =
     editor = atom.workspace.getActivePaneItem()
     text_body = editor.getText()
 
-    matches = text_body.match(/\[\^\d+\]/g) || []
-    num = String(matches.length/2+1)
+    matches = text_body.match(/\[\d+\]/g) || []
+    num = String(matches.length+1)
 
     index = "".concat('[', num, ']')
-    footnote = "".concat(num, '. ')
+    footnote = "".concat(num, '.   ')
     editor.insertText(index)
     editor.moveToBottom()
     editor.insertNewline()
